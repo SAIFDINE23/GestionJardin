@@ -15,6 +15,10 @@
         <activity
             android:name=".jardinier.ListePlantesJardinActivity"
             android:exported="false" />
+        <service
+            android:name=".service.SimpleBluetoothTestService"
+            android:exported="false" />
+
         <activity
             android:name=".jardinier.DetailJardinActivity"
             android:exported="false" />
@@ -63,6 +67,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+
+
+    <!-- Pour Android 13+ -->
+
+
+
 
 </manifest>

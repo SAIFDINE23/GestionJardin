@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">GesionJardin</string>
+    <string name="back_button">Bouton retour</string>
+    <string name="bonjour_user">Bonjour, %1$s !</string>
+    <string name="jardin_nom_placeholder">Nom du jardin</string>
+    <string name="id_placeholder">ID : %1$s</string>
+    <string name="lbl_jardinier">Jardinier</string>
+    <string name="lbl_adresse">Adresse</string>
+    <string name="lbl_surface">Surface</string>
+    <string name="voir_plantes">Voir les plantes</string>
+
 </resources>

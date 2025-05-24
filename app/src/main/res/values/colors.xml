@@ -2,4 +2,12 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="jardati_green">#2E8B57</color>
+    <color name="white_transparent">#80FFFFFF</color>
+    <color name="teal_700">#00796B</color>
+    <color name="lightGray">#F8F9FA</color>
+    <color name="green">#4CAF50</color>
+    <color name="grayText">#888888</color>
+    <color name="darkText">#333333</color>
+
 </resources>

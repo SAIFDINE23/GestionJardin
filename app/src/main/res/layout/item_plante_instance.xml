@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:gravity="center_vertical">
+
+    <!-- Espèce -->
+    <Spinner
+        android:id="@+id/spinnerEspece"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="48dp"/>
+
+    <!-- Libellé -->
+    <EditText
+        android:id="@+id/etLibelle"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="48dp"
+        android:hint="Libellé"/>
+
+    <!-- Bouton Supprimer -->
+    <ImageView
+        android:id="@+id/btnSupprimerPlante"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_delete"
+        android:contentDescription="Supprimer"/>
+</LinearLayout>

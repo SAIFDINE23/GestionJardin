@@ -1,10 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll_detail_plante"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".admin.DetailPlanteActivity">
+    android:background="@color/jardati_green"
+    android:padding="16dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Bouton retour -->
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="Retour"
+            android:padding="4dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Aperçu image -->
+        <ImageView
+            android:id="@+id/iv_plante_detail"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/rounded_image_background"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="Image de la plante" />
+
+        <!-- Nom -->
+        <EditText
+            android:id="@+id/et_plante_nom"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Nom"
+            android:textColor="@color/white"
+            android:enabled="false"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Description -->
+        <EditText
+            android:id="@+id/et_plante_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description"
+            android:textColor="@color/white"
+            android:enabled="false"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Intervalle température -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/et_plante_temp_min"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:hint="Temp min (°C)"
+                android:enabled="false"
+                android:inputType="numberDecimal" />
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/et_plante_temp_max"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:hint="Temp max (°C)"
+                android:enabled="false"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+
+        <!-- Intervalle humidité air -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/et_plante_humid_min"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:hint="Humid air min (%)"
+                android:enabled="false"
+                android:inputType="numberDecimal" />
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/et_plante_humid_max"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:hint="Humid air max (%)"
+                android:enabled="false"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+
+        <!-- Intervalle humidité sol -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/et_plante_humid_sol_min"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:hint="Humid sol min (%)"
+                android:enabled="false"
+                android:inputType="numberDecimal" />
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/et_plante_humid_sol_max"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:hint="Humid sol max (%)"
+                android:enabled="false"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+
+        <!-- Boutons action -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_modifier_plante"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Modifier" />
+
+            <Button
+                android:id="@+id/btn_enregistrer_plante"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enregistrer"
+                android:visibility="gone"
+                android:layout_marginStart="16dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

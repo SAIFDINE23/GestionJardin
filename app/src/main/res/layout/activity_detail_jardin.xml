@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGray">
+
+    <!-- Carousel d'images -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vpGardenImages"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Indicateur de page (trois points) -->
+    <LinearLayout
+        android:id="@+id/llImageIndicators"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/vpGardenImages"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Nom du jardinier -->
+    <TextView
+        android:id="@+id/tvGardenerName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Jardinier :—"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/darkText"
+        app:layout_constraintTop_toBottomOf="@id/llImageIndicators"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:paddingHorizontal="16dp"/>
+
+    <!-- Adresse -->
+    <TextView
+        android:id="@+id/tvGardenAddress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Adresse :—"
+        android:textSize="14sp"
+        android:textColor="@color/darkText"
+        app:layout_constraintTop_toBottomOf="@id/tvGardenerName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:paddingHorizontal="16dp"/>
+
+    <!-- Surface -->
+    <TextView
+        android:id="@+id/tvGardenSurface"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Surface :— m²"
+        android:textSize="14sp"
+        android:textColor="@color/darkText"
+        app:layout_constraintTop_toBottomOf="@id/tvGardenAddress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:paddingHorizontal="16dp"/>
+
+    <!-- Bouton Voir les plantes -->
+    <Button
+        android:id="@+id/btnViewPlants"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:text="Voir les plantes"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/green"
+        app:layout_constraintTop_toBottomOf="@id/tvGardenSurface"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
